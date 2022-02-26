@@ -15,9 +15,10 @@ void EmailController::ShowMailList(string &id)
     {
         //cout << mailList[id][i];
         s_mail &mail = value[i];
-        cout << mail.From;
-        cout << mail.Title;
-        cout << mail.Contents;
+        cout << "from : " << mail.From << endl;
+        cout << "title : " << mail.Title << endl;
+        cout << "contents" << mail.Contents << endl;
+        ;
     }
 
     //for (const auto &a : mailList)
@@ -30,13 +31,24 @@ void EmailController::ShowMailList(string &id)
     //}
 }
 
-void EmailController::sendMail(s_mail &m, string &to, string &from, string &title, string &contents)
+void EmailController::sendMail(string &to, string &from, string &title, string &contents)
 {
 
+    s_mail t_mail(to, from, title, contents);
+    mailList[to].push_back(t_mail);
+    //LoginService(EN_SIGNUP_SUCCESS);
+
+    //EmailAcc emailAcc(ID, PW);
+    //emailAccounts.push_back(emailAcc);
+    //LoginService(EN_SIGNUP_SUCCESS);
+
+    /*s_mail m;
+
     mailList[m.To].push_back(m);
-    mailList[m.From].push_back(m);
-    mailList[m.Title].push_back(m);
-    mailList[m.Contents].push_back(m);
+    mailList[m.From].push_back(from);
+    mailList[m.Title].push_back(title);
+    mailList[m.Contents].push_back(contents);
+*/
 }
 
 /*void EmailController::Show_All(string &ID)

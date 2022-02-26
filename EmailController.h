@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
-#include "AccController.h"
+#include <map>
 
 using namespace std;
 
 struct s_mail
 {
+    s_mail(string to, string from, string title, string contents) : To(to), From(from), Title(title), Contents(contents) {}
+    ~s_mail() {}
     string To;
     string From;
     string Title;
@@ -26,10 +28,10 @@ public:
 
     void Show_All(string &ID);
     void ShowMailList(string &id);
-    void sendMail(s_mail &m, string &to, string &from, string &title, string &contents);
+    void sendMail(string &to, string &from, string &title, string &contents);
 
     //private:
-    static map<string, vector<s_mail> > mailList;
+    map<string, vector<s_mail> > mailList;
 };
 
 //파일을 할거면...

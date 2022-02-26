@@ -66,7 +66,7 @@ EN_RESULT AccController::Login(const string &ID, const string &PW)
         }
         else if (emailAccounts[i].ID == ID && emailAccounts[i].PW == PW)
         {
-            LoginService(EN_LOGIN_SUCCESS);
+            //LoginService(EN_LOGIN_SUCCESS);
             return EN_LOGIN_SUCCESS;
         }
         else if (emailAccounts[i].ID == ID && emailAccounts[i].PW != PW)

@@ -3,11 +3,13 @@
 MainController::MainController()
 {
     accController = new AccController();
+    emailController = new EmailController();
 }
 
 MainController::~MainController()
 {
     delete accController;
+    delete emailController;
 }
 
 void MainController::start()
@@ -51,7 +53,10 @@ void MainController::start()
             cout << endl;
             const EN_RESULT res = accController->Login(ID, PW);
             if (res == EN_LOGIN_SUCCESS)
+            {
+                cout << "LOGIN_SUCCESS" << endl;
                 MainController::MailStart(ID);
+            }
         }
         break;
         case 3:
@@ -65,7 +70,7 @@ void MainController::start()
 
 void MainController::MailStart(string &ID)
 {
-    s_mail m;
+    //s_mail m;
 
     while (1)
     {
@@ -94,6 +99,7 @@ void MainController::MailStart(string &ID)
             cout << "----Send Mail----" << endl;
             cout << "1. To : ";
             cin >> to;
+
             cout << endl;
 
             cout << "2. From : ";
@@ -108,10 +114,11 @@ void MainController::MailStart(string &ID)
             cin >> contents;
             cout << endl;
 
-            emailController->sendMail(m, to, from, title, contents);
-            cout << "Sending Complete";
+            emailController->sendMail(to, from, title, contents);
+            cout << "Send Complete" << endl;
         }
         break;
+
         case 3:
         {
             return;
