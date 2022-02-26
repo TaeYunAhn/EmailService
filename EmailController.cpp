@@ -17,7 +17,8 @@ void EmailController::ShowMailList(string &id)
         s_mail &mail = value[i];
         cout << "from : " << mail.From << endl;
         cout << "title : " << mail.Title << endl;
-        cout << "contents" << mail.Contents << endl;
+        cout << "contents : " << mail.Contents << endl
+             << endl;
         ;
     }
 

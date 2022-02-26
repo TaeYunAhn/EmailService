@@ -34,10 +34,8 @@ void MainController::start()
             string PW;
             cout << "ID : ";
             cin >> ID;
-            cout << endl;
             cout << "PW : ";
             cin >> PW;
-            cout << endl;
             const EN_RESULT res = accController->SignUP(ID, PW);
         }
         break;
@@ -54,7 +52,7 @@ void MainController::start()
             const EN_RESULT res = accController->Login(ID, PW);
             if (res == EN_LOGIN_SUCCESS)
             {
-                cout << "LOGIN_SUCCESS" << endl;
+                //cout << "LOGIN_SUCCESS" << endl;
                 MainController::MailStart(ID);
             }
         }
@@ -88,8 +86,9 @@ void MainController::MailStart(string &ID)
         {
         case 1:
         {
-            emailController->ShowMailList(ID);
+
             cout << "----Mail List----" << endl;
+            emailController->ShowMailList(ID);
             //emailController->Show_All(ID);
         }
         break;
@@ -100,22 +99,19 @@ void MainController::MailStart(string &ID)
             cout << "1. To : ";
             cin >> to;
 
-            cout << endl;
-
             cout << "2. From : ";
             cin >> from;
-            cout << endl;
 
             cout << "3. Title : ";
             cin >> title;
-            cout << endl;
 
             cout << "4. Contents : ";
             cin >> contents;
             cout << endl;
 
             emailController->sendMail(to, from, title, contents);
-            cout << "Send Complete" << endl;
+            cout << "Send Complete" << endl
+                 << endl;
         }
         break;
 

@@ -29,50 +29,63 @@ void AccController::LoginService(EN_RESULT error)
 {
     if (error == EN_NOT_EXIST_ACC)
     {
-        cout << "NOT_EXIST_ACC" << endl;
+        cout << "NOT_EXIST_ACC" << endl
+             << endl;
     }
-    /*else if (error == EN_LOGIN_SUCCESS)
+    else if (error == EN_LOGIN_SUCCESS)
     {
-        cout << "LOGIN_SUCCESS" << endl;
-        //이메일 작성.보기.등등 메뉴로 감
+        cout << "LOGIN_SUCCESS" << endl
+             << endl;
     }
-    */
+
     else if (error == EN_WRONG_PW)
     {
-        cout << "WRONG_PW" << endl;
+        cout << "WRONG_PW" << endl
+             << endl;
     }
     else if (error == EN_EXIST_ALREADY)
     {
-        cout << "EXIST_ALREADY" << endl;
+        cout << "EXIST_ALREADY" << endl
+             << endl;
     }
     else if (error == EN_SIGNUP_SUCCESS)
     {
-        cout << "SIGNUP_SUCCESS" << endl;
+        cout << "SIGNUP_SUCCESS" << endl
+             << endl;
     }
     else
     {
-        cout << "error" << endl;
+        cout << "error" << endl
+             << endl;
     }
 }
 
 EN_RESULT AccController::Login(const string &ID, const string &PW)
 {
-    for (int i = 0; i < emailAccounts.size(); i++)
+    int i = 0;
+    while (i < emailAccounts.size())
     {
-        if (emailAccounts[i].ID != ID)
+
+        if (emailAccounts[i].ID == ID && emailAccounts[i].PW == PW)
         {
-            LoginService(EN_NOT_EXIST_ACC);
-            return EN_NOT_EXIST_ACC;
-        }
-        else if (emailAccounts[i].ID == ID && emailAccounts[i].PW == PW)
-        {
-            //LoginService(EN_LOGIN_SUCCESS);
+            LoginService(EN_LOGIN_SUCCESS);
             return EN_LOGIN_SUCCESS;
         }
+
         else if (emailAccounts[i].ID == ID && emailAccounts[i].PW != PW)
         {
             LoginService(EN_WRONG_PW);
             return EN_WRONG_PW;
+        }
+
+        else if (emailAccounts[i].ID != ID)
+        {
+            i++;
+            if (i == emailAccounts.size())
+            {
+                LoginService(EN_NOT_EXIST_ACC);
+                return EN_NOT_EXIST_ACC;
+            }
         }
     }
 }
