@@ -1,7 +1,11 @@
 #include "EmailController.h"
+#include "FileSaving.h"
 
 EmailController::EmailController()
 {
+    map<string, vector<s_mail> > emailData;
+    if (FileSaving::readMail(emailData))
+        mailList = emailData;
 }
 EmailController::~EmailController()
 {
@@ -36,20 +40,9 @@ void EmailController::sendMail(string &to, string &from, string &title, string &
 {
 
     s_mail t_mail(to, from, title, contents);
+    //to 의 대상이 있는지 없는지 확인
     mailList[to].push_back(t_mail);
-    //LoginService(EN_SIGNUP_SUCCESS);
-
-    //EmailAcc emailAcc(ID, PW);
-    //emailAccounts.push_back(emailAcc);
-    //LoginService(EN_SIGNUP_SUCCESS);
-
-    /*s_mail m;
-
-    mailList[m.To].push_back(m);
-    mailList[m.From].push_back(from);
-    mailList[m.Title].push_back(title);
-    mailList[m.Contents].push_back(contents);
-*/
+    FileSaving::saveMail(mailList);
 }
 
 /*void EmailController::Show_All(string &ID)

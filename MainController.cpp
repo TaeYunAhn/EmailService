@@ -98,6 +98,8 @@ void MainController::MailStart(string &ID)
             cout << "----Send Mail----" << endl;
             cout << "1. To : ";
             cin >> to;
+            // 1. 아예 여기서 gettotalAcc 가져와서 있는지 없는지 확인
+            // 2. EmailController sendMail 에서 값이 있는지 없는지 확인
 
             cout << "2. From : ";
             cin >> from;

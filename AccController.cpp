@@ -1,10 +1,14 @@
 #include "AccController.h"
 #include <string>
 #include <iostream>
+#include "FileSaving.h"
 using namespace std;
 
 AccController::AccController()
 {
+    vector<EmailAcc> data;
+    if (FileSaving::readAcc(data))
+        emailAccounts = data;
 }
 AccController::~AccController()
 {
@@ -22,6 +26,7 @@ EN_RESULT AccController::SignUP(const string &ID, const string &PW)
     }
     EmailAcc emailAcc(ID, PW);
     emailAccounts.push_back(emailAcc);
+    FileSaving::saveAcc(emailAccounts);
     LoginService(EN_SIGNUP_SUCCESS);
 }
 

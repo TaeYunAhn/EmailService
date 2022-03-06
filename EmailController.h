@@ -26,11 +26,11 @@ public:
     EmailController();
     ~EmailController();
 
-    void Show_All(string &ID);
+    //void Show_All(string &ID); .cpp 파일에 있는데 헤더에 있으면 에러날 수 있으니 지우도록 하자.
     void ShowMailList(string &id);
     void sendMail(string &to, string &from, string &title, string &contents);
 
-    //private:
+private:
     map<string, vector<s_mail> > mailList;
 };
 

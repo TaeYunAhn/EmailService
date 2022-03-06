@@ -1,24 +1,18 @@
 #include "AccController.h"
 #include "MainController.h"
 #include <iostream>
+#include <cstdio>
 using namespace std;
 
 int main()
 {
+    //FILE *fd = fopen("acc.txt", "w");
+
+    // 구현해야 하는거..
+    // 메인 컨트롤러가 실행되면 txt 파일을 메모리로 올려야 함
+    // 아이디 생성시, SignUp Success 뜨면 저장
+    // 로그인시, 메모리로 올라온 로그인 정보 찾아서 확인
+    //
     MainController MAcc;
     MAcc.start();
-
-    //startEmail()
-    /* 프로그램 실행
-    1. 회원가입 -> ID, PW, Back
-    2. 로그인 -> 맞는지 확인 -> Show -> All
-    3. 종료
-    
-    // 회원가입 or 로그인 선택
-
-    // 로그인 체크 ->
-    // 기능 선택 
-    */
-
-    //SignUP(email, password);
 }
