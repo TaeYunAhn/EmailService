@@ -1,6 +1,6 @@
 #include "FileSaving.h"
 
-bool FileSaving::readAcc(vector<EmailAcc>& emailAccounts)
+bool FileSaving::readAcc(vector<EmailAcc> &emailAccounts)
 {
     FILE *fd = fopen("Acc.txt", "r");
 
@@ -31,28 +31,27 @@ bool FileSaving::readAcc(vector<EmailAcc>& emailAccounts)
             emailAccounts.push_back(a); // 지역객체
             //emailAccounts.push_back(EmailAcc(id, pw)); // 임시객체
         }
-        
     }
     fclose(fd);
-    return;
+    return true;
 }
 
-bool FileSaving::saveAcc(const vector<EmailAcc>& emailAccounts)
+bool FileSaving::saveAcc(const vector<EmailAcc> &emailAccounts)
 {
     FILE *fd = fopen("Acc.txt", "w");
 
     if (!fd)
         return false;
 
-    for (emailAccounts)
+    for (int i = 0; i < emailAccounts.size(); i++)
     {
-        fputs((emailAccounts.id + "," + emailAccounts.pw + "\n").c_str(), fd);
+        fputs((emailAccounts[i].ID + "," + emailAccounts[i].PW + "\n").c_str(), fd);
     }
     fclose(fd);
     return true;
 }
 
-bool FileSaving::readMail(map<string, vector<s_mail>>& mailList)
+bool FileSaving::readMail(map<string, vector<s_mail> > &mailList)
 {
     FILE *fd = fopen("Email.txt", "r");
 
@@ -95,7 +94,7 @@ bool FileSaving::readMail(map<string, vector<s_mail>>& mailList)
     }
 }
 
-bool FileSaving::saveMail(const map<string, vector<s_mail>>& mailList)
+bool FileSaving::saveMail(const map<string, vector<s_mail> > &mailList)
 {
     FILE *fd = fopen("Email.txt", "w");
 
@@ -103,10 +102,10 @@ bool FileSaving::saveMail(const map<string, vector<s_mail>>& mailList)
         return false;
 
     // normal loop
-    for ( map<string, vector<s_mail>>::iterator itr = mailList.begin(); itr != mailList.end(); itr++ )
+    for (auto itr = mailList.begin(); itr != mailList.end(); itr++)
     {
         itr->first;
-        for ( int i = 0; i < itr->second.size(); i++ )
+        for (int i = 0; i < itr->second.size(); i++)
         {
             itr->second[i].To;
         };
@@ -126,19 +125,15 @@ bool FileSaving::saveMail(const map<string, vector<s_mail>>& mailList)
     //     cout << t.second;
     // }
 
-
     // range-based loop
-    for ( const pair<string, vector<s_mail>>& m : mailList )
+    for (const pair<string, vector<s_mail> > &m : mailList)
     {
         m.first;
-        for ( s_mail vElem : m.second )
+        for (s_mail vElem : m.second)
         {
-
         }
     }
 
-
-    
     // for (sizeof(mailList.first))
     // {
     //     for (mailList.second)

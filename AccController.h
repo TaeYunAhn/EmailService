@@ -16,6 +16,7 @@ enum EN_RESULT
 
 struct EmailAcc
 {
+    EmailAcc() {}
     EmailAcc(string _ID, string _PW) : ID(_ID), PW(_PW) {}
     ~EmailAcc() {}
     string ID;

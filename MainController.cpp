@@ -94,10 +94,26 @@ void MainController::MailStart(string &ID)
         break;
         case 2:
         {
+            vector<EmailAcc> totalAcc;
+            totalAcc = accController->GetTotalAcc();
+
             string to, from, title, contents;
             cout << "----Send Mail----" << endl;
             cout << "1. To : ";
             cin >> to;
+            bool find = false;
+            for (int i = 0; i < totalAcc.size(); i++)
+            {
+                if (to == totalAcc[i].ID)
+                {
+                    find = true;
+                    break;
+                }
+            }
+
+            if (find == false)
+                return (accController->LoginService(EN_NOT_EXIST_ACC));
+
             // 1. 아예 여기서 gettotalAcc 가져와서 있는지 없는지 확인
             // 2. EmailController sendMail 에서 값이 있는지 없는지 확인
 
@@ -111,7 +127,7 @@ void MainController::MailStart(string &ID)
             cin >> contents;
             cout << endl;
 
-            emailController->sendMail(to, from, title, contents);
+            emailController->sendMail(to, from, title, contents, totalAcc);
             cout << "Send Complete" << endl
                  << endl;
         }

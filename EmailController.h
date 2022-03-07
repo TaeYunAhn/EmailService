@@ -1,6 +1,8 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <map>
+#include "AccController.h"
 
 using namespace std;
 
@@ -28,7 +30,7 @@ public:
 
     //void Show_All(string &ID); .cpp 파일에 있는데 헤더에 있으면 에러날 수 있으니 지우도록 하자.
     void ShowMailList(string &id);
-    void sendMail(string &to, string &from, string &title, string &contents);
+    void sendMail(const string &to, const string &from, const string &title, const string &contents, const vector<EmailAcc> &totalAcc);
 
 private:
     map<string, vector<s_mail> > mailList;

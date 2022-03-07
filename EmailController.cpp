@@ -36,12 +36,20 @@ void EmailController::ShowMailList(string &id)
     //}
 }
 
-void EmailController::sendMail(string &to, string &from, string &title, string &contents)
+void EmailController::sendMail(const string &to, const string &from, const string &title, const string &contents, const vector<EmailAcc> &totalAcc)
 {
 
     s_mail t_mail(to, from, title, contents);
     //to 의 대상이 있는지 없는지 확인
-    mailList[to].push_back(t_mail);
+
+    /*    for (const EmailAcc t : totalAcc)
+    {
+    }
+
+    t_mail.To == to
+                     mailList[to]
+                         .push_back(t_mail);
+   */
     FileSaving::saveMail(mailList);
 }
 
