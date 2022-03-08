@@ -15,6 +15,13 @@ void EmailController::ShowMailList(string &id)
 {
     string &key = id;
     vector<s_mail> &value = mailList[key];
+    if (mailList[id].empty())
+    {
+        cout << "no mail in (" << id << ")" << endl
+             << endl;
+        return;
+    }
+
     for (int i = 0; i < value.size(); i++)
     {
         //cout << mailList[id][i];
@@ -40,16 +47,17 @@ void EmailController::sendMail(const string &to, const string &from, const strin
 {
 
     s_mail t_mail(to, from, title, contents);
+    mailList[to].push_back(t_mail);
     //to 의 대상이 있는지 없는지 확인
-
-    /*    for (const EmailAcc t : totalAcc)
+    /*bool find = false;
+    for (int i = 0; i < totalAcc.size(); i++)
     {
-    }
+        if (totalAcc[i].ID == to)
+            find = true;
+    }*/
+    //if (totalAcc[i].ID != to)
+    //    cout << "not available account" << endl;
 
-    t_mail.To == to
-                     mailList[to]
-                         .push_back(t_mail);
-   */
     FileSaving::saveMail(mailList);
 }
 

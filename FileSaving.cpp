@@ -76,21 +76,24 @@ bool FileSaving::readMail(map<string, vector<s_mail> > &mailList)
 
         ptr = strtok(NULL, ",");
         if (!ptr)
-            return -1;
+            continue;
         else
             to = ptr;
 
         ptr = strtok(NULL, ",");
         if (!ptr)
-            return -1;
+            continue;
         else
             title = ptr;
 
         ptr = strtok(NULL, ",");
         if (!ptr)
-            return -1;
+            continue;
         else
+        {
+            ptr[strlen(ptr) - 1] = '\0';
             contents = ptr;
+        }
     }
 }
 
@@ -100,50 +103,68 @@ bool FileSaving::saveMail(const map<string, vector<s_mail> > &mailList)
 
     if (!fd)
         return false;
-
-    // normal loop
-    for (auto itr = mailList.begin(); itr != mailList.end(); itr++)
+    /*for (auto itr = mailList.begin(); itr != mailList.end(); itr++)
     {
+        string id;
         itr->first;
         for (int i = 0; i < itr->second.size(); i++)
         {
-            itr->second[i].To;
-        };
-    }
+            itr->second[i].To = mailList[id].To;
+            itr->second[i].From = mailList[].From;
+        }
+    }*/
 
-    // map<int, int> test_map;
-    // test_map[0] = 0;
-    // test_map[1] = 1;
-
-    // for ( pair<int, int>& t : test_map )
-    // {
-    //     t.second = 100;
-    // }
-
-    // for ( pair<int, int> t : test_map )
-    // {
-    //     cout << t.second;
-    // }
-
-    // range-based loop
-    for (const pair<string, vector<s_mail> > &m : mailList)
+    for (const pair<string, vector<s_mail> > &a : mailList)
     {
-        m.first;
-        for (s_mail vElem : m.second)
+        for (auto &m : a.second)
         {
+            std::string tmp = m.From + "," + m.To + "," +
+                              m.Title + "," + m.Contents + "\n";
+
+            fputs(tmp.c_str(), fd);
         }
     }
-
-    // for (sizeof(mailList.first))
-    // {
-    //     for (mailList.second)
-    //     {
-    //         string mail = mailList.first + "," + mailList.from + "," + mailList.to + "," +
-    //                       mailList.title + "," + mailList.contents + "\n";
-
-    //         fputs(mail.c_str(), fd);
-    //     }
-    //     fclose(fd);
-    //     return true;
-    // }
+    fclose(fd);
+    return true;
 }
+
+// normal loop
+/*for (auto itr = mailList.begin(); itr != mailList.end(); itr++)
+    {
+        string id;
+        itr->first;
+        for (int i = 0; i < itr->second.size(); i++)
+        {
+            itr->second[i].To = mailList[id].To;
+            itr->second[i].From;
+        }
+    }*/
+
+// map<int, int> test_map;
+// test_map[0] = 0;
+// test_map[1] = 1;
+
+// for ( pair<int, int>& t : test_map )
+// {
+//     t.second = 100;
+// }
+
+// for ( pair<int, int> t : test_map )
+// {
+//     cout << t.second;
+// }
+
+// range-based loop
+
+// for (sizeof(mailList.first))
+// {
+//     for (mailList.second)
+//     {
+//         string mail = mailList.first + "," + mailList.from + "," + mailList.to + "," +
+//                       mailList.title + "," + mailList.contents + "\n";
+
+//         fputs(mail.c_str(), fd);
+//     }
+//     fclose(fd);
+//     return true;
+// }
