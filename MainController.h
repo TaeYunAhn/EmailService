@@ -1,8 +1,5 @@
 #pragma once
 #include <string>
-#include <iostream>
-#include <cstdio>
-#include "AccController.h"
 #include "EmailController.h"
 using namespace std;
 

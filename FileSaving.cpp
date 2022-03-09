@@ -1,4 +1,7 @@
+
 #include "FileSaving.h"
+
+
 
 bool FileSaving::readAcc(vector<EmailAcc> &emailAccounts)
 {
@@ -7,11 +10,11 @@ bool FileSaving::readAcc(vector<EmailAcc> &emailAccounts)
     if (!fd)
         return false;
 
-    char line[OPEN_MAX];
+    char line[512];
     char *pLine;
     while (!feof(fd))
     {
-        pLine = fgets(line, OPEN_MAX, fd);
+        pLine = fgets(line, 512, fd);
         string id;
         string pw;
 
@@ -28,8 +31,8 @@ bool FileSaving::readAcc(vector<EmailAcc> &emailAccounts)
         if (!id.empty() && !pw.empty())
         {
             EmailAcc a(id, pw);
-            emailAccounts.push_back(a); // ÏßÄÏó≠Í∞ùÏ≤¥
-            //emailAccounts.push_back(EmailAcc(id, pw)); // ÏûÑÏãúÍ∞ùÏ≤¥
+            emailAccounts.push_back(a); // ¡ˆø™∞¥√º
+            //emailAccounts.push_back(EmailAcc(id, pw)); // ¿”Ω√∞¥√º
         }
     }
     fclose(fd);
@@ -58,11 +61,11 @@ bool FileSaving::readMail(map<string, vector<s_mail> > &mailList)
     if (!fd)
         return false;
 
-    char line[OPEN_MAX];
+    char line[512];
     char *pLine;
     while (!feof(fd))
     {
-        pLine = fgets(line, OPEN_MAX, fd);
+        pLine = fgets(line, 512, fd);
         if (!pLine)
             continue;
 
@@ -94,6 +97,9 @@ bool FileSaving::readMail(map<string, vector<s_mail> > &mailList)
             ptr[strlen(ptr) - 1] = '\0';
             contents = ptr;
         }
+        mailList[to].push_back(s_mail(from, to, title, contents));
+        fclose(fd);
+        return true;
     }
 }
 

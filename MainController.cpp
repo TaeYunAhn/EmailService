@@ -18,10 +18,10 @@ void MainController::start()
     {
         int sel = 0;
         cout << "-----Menu-----" << endl;
-        cout << "1.íšŒì›ê°€ì…" << endl;
-        cout << "2.ë¡œê·¸ì¸" << endl;
-        cout << "3.ì¢…ë£Œ" << endl;
-        cout << "ì„ íƒ: ";
+        cout << "1.È¸¿ø°¡ÀÔ" << endl;
+        cout << "2.·Î±×ÀÎ" << endl;
+        cout << "3.Á¾·á" << endl;
+        cout << "¼±ÅÃ: ";
         cin >> sel;
         cout << "\n";
 
@@ -74,11 +74,11 @@ void MainController::MailStart(string &ID)
     {
         int sel = 0;
         cout << "-----" << ID << "'s Menu-----" << endl;
-        cout << "1.ë³´ê´€í•¨" << endl;
-        cout << "2.ë©”ì¼ ì“°ê¸°" << endl;
-        cout << "3.ë¡œê·¸ì•„ì›ƒ" << endl;
-        cout << "4.ì¢…ë£Œ" << endl;
-        cout << "ì„ íƒ: ";
+        cout << "1.º¸°üÇÔ" << endl;
+        cout << "2.¸ŞÀÏ ¾²±â" << endl;
+        cout << "3.·Î±×¾Æ¿ô" << endl;
+        cout << "4.Á¾·á" << endl;
+        cout << "¼±ÅÃ: ";
         cin >> sel;
         cout << "\n";
 
@@ -114,8 +114,8 @@ void MainController::MailStart(string &ID)
             if (find == false)
                 return (accController->LoginService(EN_NOT_EXIST_ACC));
 
-            // 1. ì•„ì˜ˆ ì—¬ê¸°ì„œ gettotalAcc ê°€ì ¸ì™€ì„œ ìˆëŠ”ì§€ ì—†ëŠ”ì§€ í™•ì¸
-            // 2. EmailController sendMail ì—ì„œ ê°’ì´ ìˆëŠ”ì§€ ì—†ëŠ”ì§€ í™•ì¸
+            // 1. ¾Æ¿¹ ¿©±â¼­ gettotalAcc °¡Á®¿Í¼­ ÀÖ´ÂÁö ¾ø´ÂÁö È®ÀÎ
+            // 2. EmailController sendMail ¿¡¼­ °ªÀÌ ÀÖ´ÂÁö ¾ø´ÂÁö È®ÀÎ
 
             cout << "2. From : ";
             cin >> from;
