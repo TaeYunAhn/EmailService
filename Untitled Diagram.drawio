@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2022-03-13T06:39:50.098Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="mbm0R3It_B5f7f55QXjt" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-13T06:52:54.187Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="RgrVZXi_3aGZb3Od9fp8" version="15.9.6" type="github">
   <diagram id="LGUF4Fh2FckbVwkvVZOw" name="Page-1">
     <mxGraphModel dx="813" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="afcspyIFpeXsXAPImeny-21" value="가격을 어떻게 맵에 넣고 수정해야 할지 고민입니다.&#xa;맵의 맨 마지막에 가격을 넣고, 수정할 때마다 &#xa;맵 밸류의 마지막 인자를 찾는 식으로 접근해야 할지.." style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=7;" vertex="1" parent="1">
+        <mxCell id="afcspyIFpeXsXAPImeny-21" value="가격과 재고를 어떻게 맵에 넣고 수정해야 할지 고민입니다.&#xa;맵의 맨 마지막에 가격을 넣고, 수정할 때마다 &#xa;맵 밸류의 마지막 인자를 찾는 식으로 접근해야 할지.." style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=7;" vertex="1" parent="1">
           <mxGeometry x="80" y="410" width="330" height="40" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-1" value="피자가게" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -28,13 +28,13 @@
         <mxCell id="afcspyIFpeXsXAPImeny-6" value="메뉴" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="290" y="290" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="afcspyIFpeXsXAPImeny-7" value="1. 상품 생성&lt;br&gt;2. 상품 수정&lt;br&gt;3. 가격 수정" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-6">
-          <mxGeometry x="60" y="40" width="80" height="50" as="geometry" />
+        <mxCell id="afcspyIFpeXsXAPImeny-7" value="1. 상품 생성&lt;br&gt;2. 상품 수정" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-6">
+          <mxGeometry x="60" y="50" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-8" value="메뉴" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="540" y="290" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="afcspyIFpeXsXAPImeny-9" value="1. 피자 주문&lt;br&gt;2. 주문 이력 보기" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-8">
+        <mxCell id="afcspyIFpeXsXAPImeny-9" value="1. 피자 주문&lt;br&gt;2. 주문 이력 보기" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-8">
           <mxGeometry x="45" y="50" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-10" value="1. 메뉴생성" style="swimlane;" vertex="1" parent="1">
@@ -55,7 +55,7 @@
         <mxCell id="afcspyIFpeXsXAPImeny-16" value="2. 메뉴 수정" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="40" y="614" width="200" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="afcspyIFpeXsXAPImeny-17" value="메뉴 선택&lt;br&gt;1. 치즈피자&lt;br&gt;2. 하와이안피자&lt;br&gt;3. 마르게따 피자" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-16">
+        <mxCell id="afcspyIFpeXsXAPImeny-17" value="메뉴 선택&lt;br&gt;1. 치즈피자&lt;br&gt;2. 하와이안피자&lt;br&gt;3. 마르게따 피자" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-16">
           <mxGeometry x="50" y="35" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-48" value="menu.txt" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="afcspyIFpeXsXAPImeny-16">
@@ -72,8 +72,8 @@
             <mxRectangle x="290" y="450" width="100" height="23" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="afcspyIFpeXsXAPImeny-34" value="1. 상품 이름 : 치즈&lt;br style=&quot;font-size: 11px&quot;&gt;2. 가격 : 3000원" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="afcspyIFpeXsXAPImeny-33">
-          <mxGeometry x="47.5" y="55" width="110" height="30" as="geometry" />
+        <mxCell id="afcspyIFpeXsXAPImeny-34" value="1. 상품 이름 : 치즈&lt;br style=&quot;font-size: 11px&quot;&gt;2. 가격 : 3000원&lt;br&gt;3. 재고 : 3개" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="afcspyIFpeXsXAPImeny-33">
+          <mxGeometry x="47.5" y="50" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-46" value="&#xa;&#xa;&lt;br style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 11px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 11px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;ingredient.txt&lt;/span&gt;&#xa;&#xa;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="afcspyIFpeXsXAPImeny-33">
           <mxGeometry x="150" y="89" width="60" height="30" as="geometry" />
@@ -84,7 +84,7 @@
         <mxCell id="afcspyIFpeXsXAPImeny-36" value="2. 상품 수정" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="290" y="614" width="205" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="afcspyIFpeXsXAPImeny-37" value="상품 선택&lt;br&gt;1. 치즈&lt;br&gt;2. 밀가루&lt;br&gt;3. 고기" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-36">
+        <mxCell id="afcspyIFpeXsXAPImeny-37" value="상품 선택&lt;br&gt;1. 치즈&lt;br&gt;2. 밀가루&lt;br&gt;3. 고기" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-36">
           <mxGeometry x="65" y="35" width="70" height="60" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-51" value="&#xa;&#xa;&lt;br style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 11px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 11px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;ingredient.txt&lt;/span&gt;&#xa;&#xa;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="afcspyIFpeXsXAPImeny-36">
@@ -93,8 +93,8 @@
         <mxCell id="afcspyIFpeXsXAPImeny-38" value="1. 치즈" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="290" y="764" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="afcspyIFpeXsXAPImeny-39" value="1. 상품명 변경&lt;br&gt;2. 가격 변경" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-38">
-          <mxGeometry x="55" y="50" width="90" height="30" as="geometry" />
+        <mxCell id="afcspyIFpeXsXAPImeny-39" value="1. 상품명 변경&lt;br&gt;2. 가격 변경&lt;br&gt;&lt;div&gt;&lt;span&gt;3. 재고갯수 변경&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="afcspyIFpeXsXAPImeny-38">
+          <mxGeometry x="50" y="40" width="100" height="50" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=7;" edge="1" parent="1" source="afcspyIFpeXsXAPImeny-40" target="afcspyIFpeXsXAPImeny-2">
           <mxGeometry relative="1" as="geometry">
@@ -163,7 +163,7 @@
         <mxCell id="afcspyIFpeXsXAPImeny-64" value="CCustomer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="560" y="175" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="afcspyIFpeXsXAPImeny-65" value="&lt;font size=&quot;1&quot;&gt;정렬을 해봐야 할까여.. 시간순, 번호순, 가격순?&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=5;" vertex="1" parent="1">
+        <mxCell id="afcspyIFpeXsXAPImeny-65" value="&lt;font style=&quot;font-size: 7px&quot;&gt;정렬을 해봐야 할까여.. 시간순, 번호순, 가격순?&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=5;" vertex="1" parent="1">
           <mxGeometry x="531.5" y="920" width="230" height="30" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-67" value="map&amp;lt;name, &amp;lt;ingredient&amp;gt;&amp;gt; ingredient" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
