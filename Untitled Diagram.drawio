@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-13T06:35:06.788Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="RmHWf1nBsodCcTEQ0kKJ" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-13T06:39:50.098Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="mbm0R3It_B5f7f55QXjt" version="15.9.6" type="github">
   <diagram id="LGUF4Fh2FckbVwkvVZOw" name="Page-1">
     <mxGraphModel dx="813" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -164,7 +164,7 @@
           <mxGeometry x="560" y="175" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-65" value="&lt;font size=&quot;1&quot;&gt;정렬을 해봐야 할까여.. 시간순, 번호순, 가격순?&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=5;" vertex="1" parent="1">
-          <mxGeometry x="537.5" y="930" width="230" height="30" as="geometry" />
+          <mxGeometry x="531.5" y="920" width="230" height="30" as="geometry" />
         </mxCell>
         <mxCell id="afcspyIFpeXsXAPImeny-67" value="map&amp;lt;name, &amp;lt;ingredient&amp;gt;&amp;gt; ingredient" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
           <mxGeometry x="290" y="567" width="180" height="30" as="geometry" />
